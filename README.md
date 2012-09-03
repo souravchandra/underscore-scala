@@ -1,4 +1,4 @@
 underscore-scala
 ================
 
-Attempt to port underscore.js functions into scala
+Porting underscore.js functions into scala
