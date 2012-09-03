@@ -30,32 +30,32 @@ object Underscore {
     }
   }
 
-  def init(a: Int) = {
-    println("inited : " + a)
-    System.currentTimeMillis()
-  }
-  
-  def render() {
-    println("rendering")
-  }
-  
-  def asyncSave(callback: => Any) {
-    new Thread() {
-      override def run() {
-        println("running callback " + Thread.currentThread())
-        callback
-      }
-    }.start()
-  }
-
-  def main(args: Array[String]) {
+//private[this] def init(a: Int) = {
+//  println("inited : " + a)
+//  System.currentTimeMillis()
+//}
+//
+//private[this]def render() {
+//  println("rendering")
+//}
+//
+//private[this] def asyncSave(callback: => Any) {
+//  new Thread() {
+//    override def run() {
+//      println("running callback " + Thread.currentThread())
+//      callback
+//    }
+//  }.start()
+//}
+//
+// def main(args: Array[String]) {
 //    var v = once(init(12))
 //    println(v())
 //    println(v())
 //    println(v())
-    var v = after(3, render)
-    for (i <- 1 to 4) {
-      asyncSave(v())
-    }
-  }
+//    var v = after(3, render)
+//  for (i <- 1 to 4) {
+//    asyncSave(v())
+//  }
+//}
 }
